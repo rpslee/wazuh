@@ -27,7 +27,7 @@ spec:
         node-type: worker
       name: wazuh-manager-worker
       annotations:
-        argocd.wazuh.io/redeploy-ts: "{{ now | quote }}"
+        argocd.wazuh.io/redeploy-ts: "2025-03-23T01:22:00"
     spec:
       affinity:
         podAntiAffinity:
