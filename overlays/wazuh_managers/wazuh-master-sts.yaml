@@ -44,8 +44,11 @@ spec:
           image: 'wazuh/wazuh-manager:4.11.1'
           resources:
             limits:
-              cpu: 400m
-              memory: 512Mi
+              cpu: 2
+              memory: 5Gi
+            requests:
+              cpu: 1
+              memory: 2Gi
           securityContext:
             capabilities:
               add: ["SYS_CHROOT"]
