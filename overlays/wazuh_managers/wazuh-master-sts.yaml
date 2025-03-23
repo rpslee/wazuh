@@ -163,4 +163,4 @@ spec:
         storageClassName: wazuh-storage
         resources:
           requests:
-            storage: 1Gi
+            storage: 500mi
