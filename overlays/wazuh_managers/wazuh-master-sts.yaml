@@ -161,10 +161,11 @@ spec:
       spec:
         accessModes:
           - ReadWriteOnce
+        resources:
+          requests:
+            storage: 500mi
         storageClassName: wazuh-storage
         volumeMode: Filesystem
       status:
         phase: Pending
-        resources:
-          requests:
-            storage: 500mi
+        
