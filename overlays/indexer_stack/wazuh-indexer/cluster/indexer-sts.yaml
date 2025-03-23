@@ -5,7 +5,7 @@
 # License (version 2) as published by the FSF - Free Software
 # Foundation.
 
-# Indexer StatefulSet: 3 master nodes.
+# Indexer StatefulSet: 1 master nodes.
 
 apiVersion: apps/v1
 kind: StatefulSet
@@ -13,7 +13,7 @@ metadata:
   name: wazuh-indexer
   namespace: wazuh
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: wazuh-indexer
@@ -62,8 +62,11 @@ spec:
           image: 'wazuh/wazuh-indexer:4.11.1'
           resources:
             limits:
-              cpu: 500m
-              memory: 1564Mi
+              cpu: 2
+              memory: 5Gi
+            requests:
+              cpu: 1
+              memory: 2Gi
           env:
             - name: OPENSEARCH_JAVA_OPTS
               value: '-Xms1g -Xmx1g -Dlog4j2.formatMsgNoLookups=true'
