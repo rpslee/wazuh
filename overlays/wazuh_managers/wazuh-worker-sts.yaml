@@ -26,6 +26,8 @@ spec:
         app: wazuh-manager
         node-type: worker
       name: wazuh-manager-worker
+      annotations:
+        argocd.wazuh.io/redeploy-ts: "{{ now | quote }}"
     spec:
       affinity:
         podAntiAffinity:

@@ -26,6 +26,8 @@ spec:
         app: wazuh-manager
         node-type: master
       name: wazuh-manager-master
+      annotations:
+        argocd.wazuh.io/redeploy-ts: "{{ now | quote }}"
     spec:
       volumes:
         - name: config
