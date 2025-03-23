@@ -163,7 +163,7 @@ spec:
           - ReadWriteOnce
         resources:
           requests:
-            storage: 500mi
+            storage: 500Mi
         storageClassName: wazuh-storage
         volumeMode: Filesystem
       status:
