@@ -138,7 +138,9 @@ spec:
                   name: wazuh-cluster-key
                   key: key
   volumeClaimTemplates:
-    - metadata:
+    - apiVersion: v1
+      kind: PersistentVolumeClaim
+      metadata:
         name: wazuh-manager-worker
         namespace: wazuh
       spec:
