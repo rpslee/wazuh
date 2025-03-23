@@ -155,12 +155,16 @@ spec:
     - apiVersion: v1
       kind: PersistentVolumeClaim
       metadata:
+        creationTimestamp: null
         name: wazuh-manager-master
         namespace: wazuh
       spec:
         accessModes:
           - ReadWriteOnce
         storageClassName: wazuh-storage
+        volumeMode: Filesystem
+      status:
+        phase: Pending
         resources:
           requests:
             storage: 500mi
