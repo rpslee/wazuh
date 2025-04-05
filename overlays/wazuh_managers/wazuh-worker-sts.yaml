@@ -49,8 +49,8 @@ spec:
       securityContext:
         fsGroup: 101
       containers:
-        - name: wazuh-manager
-          image: 'wazuh/wazuh-manager:4.11.1'
+        - name: wazuh-worker
+          image: 'wazuh/wazuh-manager:4.11.2'
           resources:
             limits:
               cpu: 1
